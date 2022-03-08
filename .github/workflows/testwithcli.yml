@@ -42,7 +42,7 @@ jobs:
     - name: cli upload reports
       env:
         THUNDRA_FORESIGHT_LOG_LEVEL: debug
-        THUNDRA_APIKEY: e7a8aece-7e12-4912-9898-7fd22319c19a
-        THUNDRA_FORESIGHT_PROJECT_ID: e963c17b-c64e-46e4-996d-3e9a83d67eb6
-        THUNDRA_UPLOADER_SIGNER_URL: https://upload.thundra.io
+        THUNDRA_APIKEY: 45538416-9c3b-4f33-8007-59cb56361a10
+        THUNDRA_FORESIGHT_PROJECT_ID: b7833065-0389-450e-9a22-56825babfaca
+        THUNDRA_UPLOADER_SIGNER_URL: https://upload.thundra.us
       run: thundra-foresight-cli upload-test -ud ./report -f PYTHON
