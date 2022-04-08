@@ -75,3 +75,6 @@ class RTAnalysis:
         if type(var) is not pd.core.series.Series:
             var = pd.Series(var)
         return(var)
+    
+    def sum(var):
+        print(3*5)
