@@ -76,6 +76,7 @@ class RTAnalysis:
             var = pd.Series(var)
         return(var)
     
+    
     def sum(var):
         print(3*5)
     
