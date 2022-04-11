@@ -78,3 +78,6 @@ class RTAnalysis:
     
     def sum(var):
         print(3*5)
+    
+    def add(var):
+        print(3+5)
