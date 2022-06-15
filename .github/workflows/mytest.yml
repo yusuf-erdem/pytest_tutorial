@@ -47,6 +47,6 @@ jobs:
     - name: Archive coverage results
       uses: actions/upload-artifact@v2
       with:
-          name: coverage-result-python
+          name: coverage-artifact
           path: |
             /home/runner/work/pytest_tutorial/pytest_tutorial/coverage.xml
