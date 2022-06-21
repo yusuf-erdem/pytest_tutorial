@@ -36,8 +36,8 @@ jobs:
     - name: Test with pytest
       run: |
         mkdir test-results
-        python -m pytest --cov=rtanalysis --cov-report=xml:cov.xml --junitxml=test-results/junit.xml
-        python -m pytest --cov=coverage_demo --cov-report=xml:cov2.xml --junitxml=test-results/junit2.xml
+        python -m pytest tests --cov=. --cov-report=xml:cov.xml --junitxml=test-results/junit.xml
+        python -m pytest tests2 --cov=. --cov-report=xml:cov2.xml --junitxml=test-results/junit2.xml
     - name: Archive test results
       uses: actions/upload-artifact@v2
       with:
