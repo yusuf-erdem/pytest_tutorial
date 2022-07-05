@@ -37,6 +37,23 @@ jobs:
       run: |
         mkdir test-results
         python -m pytest --cov=rtanalysis --cov-report=xml --junitxml=test-results/junit.xml
+
+    - name: Thundra Registry
+      if: success() || failure()
+      run: |
+        npm config set registry ${{ secrets.THUNDRA_REGISTRY }}
+        npm config set _auth ${{ secrets.THUNDRA_REGISTRY_AUTH }}
+    - name: Foresight Action
+      if: success() || failure()
+      uses: thundra-io/foresight-test-kit-action@initial-action
+      with:
+        api_key: ${{ secrets.THUNDRA_APIKEY }}
+        coverage_format: COBERTURA/XML
+        coverage_path: |
+          /home/runner/work/pytest_tutorial/pytest_tutorial/coverage.xml
+        cli_version: 213.3.12
+
+
     - name: Archive test results
       uses: actions/upload-artifact@v2
       with:
@@ -44,9 +61,3 @@ jobs:
           path: |
             /home/runner/work/pytest_tutorial/pytest_tutorial/test-results/
       
-    - name: Archive coverage results
-      uses: actions/upload-artifact@v2
-      with:
-          name: coverage-artifact
-          path: |
-            /home/runner/work/pytest_tutorial/pytest_tutorial/coverage.xml
