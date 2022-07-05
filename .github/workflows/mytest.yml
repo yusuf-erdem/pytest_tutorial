@@ -37,6 +37,7 @@ jobs:
       run: |
         mkdir test-results
         python -m pytest --cov=rtanalysis --cov-report=xml --junitxml=test-results/junit.xml
+        ls -lR
 
     - name: Thundra Registry
       if: success() || failure()
