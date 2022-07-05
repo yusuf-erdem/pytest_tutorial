@@ -53,7 +53,7 @@ jobs:
         coverage_format: COBERTURA/XML
         coverage_path: |
           /home/runner/work/pytest_tutorial/pytest_tutorial/*.xml
-        cli_version: 213.3.12
+        cli_version: 213.3.14
 
 
     - name: Archive test results
