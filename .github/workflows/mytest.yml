@@ -57,6 +57,7 @@ jobs:
         coverage_format: COBERTURA/XML
         coverage_path: |
           /home/runner/work/pytest_tutorial/pytest_tutorial/coverage.xml
+          /home/runner/work/pytest_tutorial/pytest_tutorial/lcov.info
         cli_version: 213.3.14
 
 
