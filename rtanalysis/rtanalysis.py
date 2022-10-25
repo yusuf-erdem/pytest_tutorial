@@ -5,7 +5,6 @@ compute mean RT for correct trials and mean accuracy
 # %%
 import pandas as pd
 
-
 # %%
 class RTAnalysis:
     """[summary]
